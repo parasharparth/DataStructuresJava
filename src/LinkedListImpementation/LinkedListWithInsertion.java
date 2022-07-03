@@ -38,10 +38,25 @@ public class LinkedListWithInsertion {
         //The seventh step is to add a new node in the end
         list.addNodeInTheEnd(5);
 
+        //The eight step is to insert at a given position
+        list.addNodeAtPosition(second,6);
+
         //Print the linked list with the new Node
         list.traversal();
     }
 
+    public void addNodeAtPosition(Node prev_Node, int data)
+    {
+        if(prev_Node == null)
+        {
+            System.out.println("The previous node cannot be null");
+            return;
+        }
+
+        Node new_node = new Node(data);
+        new_node.next = prev_Node.next;
+        prev_Node.next = new_node;
+    }
     public void addNodeInBeginning(int new_data)
     {
         Node new_node = new Node(new_data);
