@@ -45,8 +45,38 @@ public class LinkedList01 {
             list1.deleteUsingData(2);
             System.out.println("List after deleting using a Node's data: ");
             list1.traversal();
+            list1.deleteUsingPosition(1);
+            System.out.println("List after deleting using position");
+            list1.traversal();
+
+            //delete from tail after this
         }
 
+        public void deleteUsingPosition(int position)
+        {
+            if(head == null)
+            {
+                System.err.println("List is empty");
+                return;
+            }
+            if(position == 0)
+            {
+                //Head to be deleted
+                Node temp = head.next;
+                head = temp;
+                return;
+            }
+
+            //find the previous node
+            int prev_position = position-1;
+            Node prev = head;
+            for(int i=0; i<prev_position;i++)
+            {
+                prev = prev.next;   //It will have the previous node
+            }
+            Node to_be_deleted = prev.next;
+            prev.next = to_be_deleted.next;
+        }
         public void deleteUsingData(int data)
         {
             //Case if data is present at the head
