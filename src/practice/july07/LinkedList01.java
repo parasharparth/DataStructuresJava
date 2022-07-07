@@ -48,10 +48,35 @@ public class LinkedList01 {
             list1.deleteUsingPosition(1);
             System.out.println("List after deleting using position");
             list1.traversal();
-
-            //delete from tail after this
+            list1.deleteFromTail();
+            System.out.println("List after deleting from tail");
+            list1.traversal();
+            list1.deleteFromTail();
+            System.out.println("List after deleting from tail");
+            list1.traversal();
         }
 
+        public void deleteFromTail()
+        {
+            if(head == null)
+            {
+                System.out.println("The list is empty");
+                return;
+            }
+            if(head.next == null)
+            {
+                head = null;
+                return;
+            }
+            Node prev = head;
+            Node tail = head.next;
+            while(tail.next != null)
+            {
+                tail = tail.next;
+                prev = prev.next;
+            }
+            prev.next = null;
+        }
         public void deleteUsingPosition(int position)
         {
             if(head == null)

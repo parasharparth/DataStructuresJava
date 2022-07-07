@@ -30,6 +30,10 @@ public class LinkedListWithDeletion {
         list.addNode(second,6);
         list.traversal();
 
+        /*********************************************************************
+         * for all deletion scenarios, see the JULY 07 Practice Package
+         * class Name- LinkedList01
+         ********************************************************************/
     }
 
     public void addAtHead(int new_data)
