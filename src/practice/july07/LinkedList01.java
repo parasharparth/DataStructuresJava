@@ -38,21 +38,48 @@ public class LinkedList01 {
             list1.deleteHead();
             System.out.println("List after deleting the head");
             list1.traversal();
-            list1.deleteFromPosition(second,third);
+            //list1.deleteFromPosition1(second,third);
+            list1.deleteAfterNode(second);
             System.out.println("List after deleting element from a position");
+            list1.traversal();
+            list1.deleteUsingData(2);
+            System.out.println("List after deleting using a Node's data: ");
             list1.traversal();
         }
 
-        public void deleteFromPosition(Node prev_node, Node to_be_deleted)
+        public void deleteUsingData(int data)
         {
-            if(prev_node==null || to_be_deleted==null)
+            Node n = head;
+            while(n!=null)
             {
-                System.out.println("Null Node found");
+                if(n.data == data)
+                {
+                    n.next = n.next.next;
+                }
+            }
+        }
+        public void deleteAfterNode(Node prev_node)
+        {
+            if(prev_node == null)
+            {
+                System.err.println("Previous node cannot be null");
                 return;
             }
-            prev_node.next = to_be_deleted.next;
-            to_be_deleted.next = null;
+            Node temp = prev_node.next;
+            prev_node.next = temp.next;
         }
+//        public void deleteFromPosition1(Node prev_node, Node to_be_deleted)
+//        {
+//            if(prev_node==null || to_be_deleted==null)
+//            {
+//                System.out.println("Null Node found");
+//                return;
+//            }
+//            //This is because we have to delete the third position but I am taking the Node named third.
+//            //SO the answer will be wrong
+//            //prev_node.next = to_be_deleted.next;
+//            //to_be_deleted.next = null;
+//        }
         public void deleteHead()
         {
             if(head == null)
