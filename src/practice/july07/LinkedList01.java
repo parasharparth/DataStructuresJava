@@ -49,15 +49,28 @@ public class LinkedList01 {
 
         public void deleteUsingData(int data)
         {
-            Node n = head;
+            //Case if data is present at the head
+            if(head.data == data)
+            {
+                head = head.next;
+                return;
+            }
+
+            //Otherwise
+            Node prev = head;
+            Node n = head.next;
             while(n!=null)
             {
                 if(n.data == data)
                 {
-                    n.next = n.next.next;
+                    prev.next = n.next;
+                    return;
                 }
+                prev.next = n;
+                n = n.next;
             }
         }
+
         public void deleteAfterNode(Node prev_node)
         {
             if(prev_node == null)
