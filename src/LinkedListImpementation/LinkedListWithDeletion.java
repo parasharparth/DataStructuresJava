@@ -28,7 +28,9 @@ public class LinkedListWithDeletion {
         list.addAtHead(0);
         list.addAtEnd(4);
         list.addNode(second,6);
+
         list.traversal();
+
     }
 
     public void addAtHead(int new_data)
