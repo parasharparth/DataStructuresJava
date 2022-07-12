@@ -29,6 +29,43 @@ public class LinkedList {
         System.out.println("List after adding an element to the head is: ");
         list.addToHead(4);
         list.traversal();
+        System.out.println("List after adding an element to the tail");
+        list.addToTail(5);
+        list.traversal();
+        System.out.println("List after adding an element to a position: ");
+        list.addToPosition(second,6);
+        list.traversal();
+    }
+
+    public void addToPosition(Node prev_node, int new_data)
+    {
+        if(prev_node == null)
+        {
+            System.err.println("Previous node cannot be null");
+            return;
+        }
+        Node new_node = new Node(new_data);
+        new_node.next =  prev_node.next;
+        prev_node.next = new_node;
+    }
+
+    public void addToTail(int new_data)
+    {
+        if(head == null)
+        {
+            Node new_node = new Node(new_data);
+            new_node.next = null;
+            head = new_node;
+            return;
+        }
+        Node n = head;
+        while(n.next!=null)
+        {
+            n = n.next;
+        }
+        Node new_node = new Node(new_data);
+        new_node.next = null;
+        n.next = new_node;
     }
 
     public void addToHead(int new_data)
