@@ -1,7 +1,5 @@
 package QueueImplementation;
 
-import java.util.Queue;
-
 /*********************************************************************************************
  * This is the basic implementation of a linear queue using arrays
  * It has two ends with two integers pointing to the two ends namely
@@ -139,7 +137,9 @@ public class Queue01 {
     {
         Queue01 queue01 = new Queue01();
         queue01.enqueue(1);
+        queue01.traversal();
         queue01.enqueue(2);
+        queue01.traversal();
         queue01.enqueue(3);
         System.out.println("The queue after adding elements");
         queue01.traversal();
