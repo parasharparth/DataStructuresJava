@@ -16,7 +16,7 @@ public class Stack01 {
     /*****************************************************************************************************
      * Defining the Array which will act as a stack and the variable which will point to the top element
      *****************************************************************************************************/
-    int CAPACITY = 10;
+    int CAPACITY = 5;
     int[] arr;
     int top;
 
@@ -46,7 +46,7 @@ public class Stack01 {
      **************************************************/
     public boolean isFull()
     {
-        if(top == CAPACITY)
+        if(top == CAPACITY-1)
         {
             //Implies that the stack is full and no more elements can be added
             return true;
@@ -62,7 +62,7 @@ public class Stack01 {
         System.out.println("Adding element: "+element+" to the stack");
         if(isFull() == true)
         {
-            System.err.println("The given stack is already full, Cannot add more elements");
+            System.out.println("The given stack is already full, Cannot add more elements");
             return false;
         }
         top = top +1;
@@ -79,7 +79,7 @@ public class Stack01 {
         System.out.println("Calling the pop function for removing the top element");
         if(isEmpty() == true)
         {
-            System.err.println("The stack is empty, cannot remove elements");
+            System.out.println("The stack is empty, cannot remove elements");
             return false;
         }
         top = top-1;
