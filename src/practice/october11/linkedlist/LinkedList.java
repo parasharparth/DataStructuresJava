@@ -37,7 +37,14 @@ public class LinkedList {
 
     public void addToPosition(Node prev_Node, int element)
     {
-
+        if(prev_Node == null)
+        {
+            System.out.println("Previous Node cannot be null");
+            return;
+        }
+        Node new_Node = new Node(element);
+        new_Node.next = prev_Node.next;
+        prev_Node.next = new_Node;
     }
 
     public void addToHead(int element)
