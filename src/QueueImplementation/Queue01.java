@@ -136,19 +136,30 @@ public class Queue01 {
     public static void main(String[] args)
     {
         Queue01 queue01 = new Queue01();
+//        queue01.enqueue(1);
+//        queue01.traversal();
+//        queue01.enqueue(2);
+//        queue01.traversal();
+//        queue01.enqueue(3);
+//        System.out.println("The queue after adding elements");
+//        queue01.traversal();
+//        queue01.dequeue();
+//        System.out.println("Queue after removing the elements");
+//        queue01.traversal();
+//
+//        queue01.front();
+//        queue01.rear();
         queue01.enqueue(1);
-        queue01.traversal();
         queue01.enqueue(2);
-        queue01.traversal();
         queue01.enqueue(3);
-        System.out.println("The queue after adding elements");
+        queue01.enqueue(4);
         queue01.traversal();
         queue01.dequeue();
-        System.out.println("Queue after removing the elements");
+        queue01.dequeue();
+        queue01.dequeue();
+        queue01.dequeue();
         queue01.traversal();
 
-        queue01.front();
-        queue01.rear();
     }
 }
 
