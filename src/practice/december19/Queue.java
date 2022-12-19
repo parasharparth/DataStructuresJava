@@ -64,9 +64,9 @@ public class Queue {
     void traversal()
     {
         System.out.print("Queue: ");
-        for(int i=front; i<=rear; i++)
+        for(int i=this.front; i<=this.rear; i++)
         {
-            System.out.print(arr[i] +" ");
+            System.out.print(this.arr[i] +" ");
         }
         System.out.println();
     }
