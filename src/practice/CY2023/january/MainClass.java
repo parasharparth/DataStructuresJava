@@ -1,6 +1,6 @@
 package practice.CY2023.january;
 
-import practice.CY2023.january.jan14.Stack;
+import practice.CY2023.january.jan15.Stack;
 
 public class MainClass {
 
