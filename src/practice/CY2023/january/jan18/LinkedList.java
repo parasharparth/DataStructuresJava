@@ -97,7 +97,6 @@ public class LinkedList {
                 System.out.println("Head is already empty");
                 return;
             }
-
         }
     }
 }
