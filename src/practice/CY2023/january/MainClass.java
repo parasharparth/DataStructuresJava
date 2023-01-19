@@ -1,6 +1,7 @@
 package practice.CY2023.january;
 
-import practice.CY2023.january.jan15.Stack;
+import practice.CY2023.january.jan18.Stack;
+import practice.CY2023.january.jan18.Queue;
 
 public class MainClass {
 
@@ -21,5 +22,21 @@ public class MainClass {
         stack.pop();
         System.out.println("--------------STACK AFTER POP OPERATION-------------");
         stack.traversal();
+
+        System.out.println("----------------QUEUE OPERATIONS------------------");
+        Queue queue = new Queue();
+        System.out.println("----------------ENQUEUE OPERATION------------------");
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        System.out.println("-------------------QUEUE AFTER ENQUEUE OPERATION---------------");
+        queue.traversal();
+        System.out.println("-------------------DEQUEUE OPERATION--------------------");
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        System.out.println("-------------------------QUEUE AFTER DEQUEUE OPERATION------------------------");
+        queue.traversal();
     }
 }
