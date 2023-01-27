@@ -1,4 +1,4 @@
-package practice.august19.linkedList;
+package practice.CY2022.august19.linkedList;
 
 public class LinkedList {
 
