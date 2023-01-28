@@ -1,7 +1,7 @@
 package practice.CY2023.january;
 
-import practice.CY2023.january.jan26.Stack;
-import practice.CY2023.january.jan24.Queue;
+import practice.CY2023.january.jan27.Stack;
+import practice.CY2023.january.jan27.Queue;
 
 public class MainClass {
 
